@@ -9,6 +9,7 @@ services:
       - odoo-data:/var/lib/odoo
       - ./config/odoo.conf:/etc/odoo/odoo.conf
       - ./addons:/mnt/extra-addons
+      - ./odoo-source/odoo:/usr/lib/python3/dist-packages/odoo
     environment:
       - HOST=db
       - USER=${POSTGRES_USER}
